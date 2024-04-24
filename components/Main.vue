@@ -44,7 +44,7 @@ function shuffle(array) {
       MeDM utilizes pre-trained image Diffusion Models for video-to-video translation with consistent temporal flow. The proposed framework can render videos from scene position information, such as a normal G-buffer, or perform text-guided editing on videos captured in real-world scenarios. We employ explicit optical flows to construct a practical coding that enforces physical constraints on generated frames and mediates independent frame-wise scores. By leveraging this coding, maintaining temporal consistency in the generated videos can be framed as an optimization problem with a closed-form solution. To ensure compatibility with Stable Diffusion, we also suggest a workaround for modifying observed-space scores in latent-space Diffusion Models. Notably, MeDM does not require fine-tuning or test-time optimization of the Diffusion Models.
     </p>
     <div class="image">
-      <ImageZoom src="/images/girl.jpg" :options="{ background: imageOverlayColor }" />
+      <ImageZoom src="images/girl.jpg" :options="{ background: imageOverlayColor }" />
       <div class="caption">We extract a 20-pixel-wide vertical segment of pixels from each generated frame and stack them horizontally. MeDM produces fluent videos which reconstruct stripe-free images.
         <a @click="showGirlVideo = !showGirlVideo">
         <template v-if="!showGirlVideo">Show</template>
